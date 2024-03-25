@@ -1,0 +1,166 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2024-03-25T12:39:30.186Z",
+    "end": "2024-03-25T12:45:42.827Z",
+    "duration": 372641
+  },
+  "results": [
+    {
+      "uuid": "ae94f513-f6e7-4544-b348-9cf07ce8b76b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AddNewTelentTest.cy.js",
+      "file": "cypress\\e2e\\tests\\AddNewTelentTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "065efd51-319b-4b83-912c-cc4b3d4730eb",
+          "title": "Employee Onboarding Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verifies successful onboarding for a new talent opting for WFH and a full-time position",
+              "fullTitle": "Employee Onboarding Tests Verifies successful onboarding for a new talent opting for WFH and a full-time position",
+              "timedOut": null,
+              "duration": 76780,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "talentDetailsPage.fillNewTalentDetailsForm(\"wfh\");\nemploymentAgreementDetailsPage.fillEmploymentAgreementForm('fullTime');\nemploymentContractClausesPage.fillEmploymentContractClausesForm();\nemploymentCompensationCalculationPage.fillEmploymentCompensationCalculationForm();\ntalentEmailInvitationPage.fillNewTalentMailInvitation();\nemploymentAgreementSummaryPage.confirmcandidateValidInformation();\nemploymentAgreementSummaryPage.goToTalentList();\nhomePage.openOnboardingList();\nhomePage.talentNameEntry.contains(`${testData.firstName} ${testData.lastName}`).should('exist');\nhomePage.markTheitemHasBeenRecieved();\nhomePage.newEmplyeeReceivedItem.contains(`Your part of the data collection to onboard John in Germany has been finished`).should('exist');",
+              "err": {},
+              "uuid": "90ac1f92-a5f0-4520-b933-5af8a7cff364",
+              "parentUUID": "065efd51-319b-4b83-912c-cc4b3d4730eb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "90ac1f92-a5f0-4520-b933-5af8a7cff364"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 76780,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "1df9290b-747e-47f0-b160-7f2cd5dca3a5",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AddNewTelentTest.cy.js",
+      "file": "cypress\\e2e\\tests\\AddNewTelentTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ba86eb9a-637f-4b6f-b97e-f7e6d2e05333",
+          "title": "Employee Onboarding Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verifies successful onboarding for a new talent opting for WFH and a full-time position",
+              "fullTitle": "Employee Onboarding Tests Verifies successful onboarding for a new talent opting for WFH and a full-time position",
+              "timedOut": null,
+              "duration": 85158,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "talentDetailsPage.fillNewTalentDetailsForm(\"wfh\");\nemploymentAgreementDetailsPage.fillEmploymentAgreementForm('fullTime');\nemploymentContractClausesPage.fillEmploymentContractClausesForm();\nemploymentCompensationCalculationPage.fillEmploymentCompensationCalculationForm();\ntalentEmailInvitationPage.fillNewTalentMailInvitation();\nemploymentAgreementSummaryPage.confirmcandidateValidInformation();\nemploymentAgreementSummaryPage.goToTalentList();\nhomePage.openOnboardingList();\nhomePage.talentNameEntry.contains(`${testData.firstName} ${testData.lastName}`).should('exist');\nhomePage.markTheitemHasBeenRecieved();\nhomePage.newEmplyeeReceivedItem.contains(`Your part of the data collection to onboard John in Germany has been finished`).should('exist');",
+              "err": {},
+              "uuid": "ac0f06e7-62f0-4397-b8b1-96b6614b3970",
+              "parentUUID": "ba86eb9a-637f-4b6f-b97e-f7e6d2e05333",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ac0f06e7-62f0-4397-b8b1-96b6614b3970"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 85158,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportPageTitle": "Test Report",
+        "charts": true,
+        "overwrite": false,
+        "embeddedScreenshots": true,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
