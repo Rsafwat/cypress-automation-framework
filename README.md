@@ -67,5 +67,5 @@ Tests are configured to run against the base URL `https://beta.workmotion.com/lo
 ## Reporting
 
 Test execution results are available in the `cypress/report` directory. The mochawesome reporter generates a JSON report, which can then be merged into a comprehensive HTML report for easy viewing.
-![Test Result from running tests in terminal](TestResultFromTerminal.png)
+![Test Result from running tests in terminal](images/TestResultFromTerminal.png)
 ![Test Result 2](images/CypressTestReport.png)
