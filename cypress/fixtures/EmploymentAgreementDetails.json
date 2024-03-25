@@ -1,0 +1,31 @@
+{
+  "jobTitle": "Senior Software Engineer",
+  "jobDescription": [
+    "Develop software applications",
+    "Maintain system integrity",
+    "Implement security protocols",
+    "Conduct code reviews",
+    "Optimize system performance"
+  ],
+  "jobDescriptionInGermany": [
+    "Entwicklung von Softwareanwendungen",
+    "Systemintegrität wahren",
+    "Sicherheitsprotokolle implementieren",
+    "Code-Überprüfungen durchführen",
+    "Systemleistung optimieren"
+  ],
+  "signatory": {
+    "name": "Bastian Wolff",
+    "title": "Software Head"
+  },
+  "contractStartDate": {
+    "day": 1,
+    "month": 5,
+    "year": 2024
+  },
+  "contractEndDate": {
+    "day": 1,
+    "month": 5,
+    "year": 2025
+  }
+}

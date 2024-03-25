@@ -1,0 +1,14 @@
+{
+  "firstName": "Bastian",
+  "lastName": "Meyer",
+  "yearOfBirth": "1990",
+  "monthOfBirth": "2",
+  "dayOfBirth": "2",
+  "validAddress": "Yes",
+  "addressLine1": "Haaseplatz 5a 02553 Obertshausen",
+  "state": "Cyprus",
+  "postalCode": "57458",
+  "workAddress": "Kurfürstendamm 200, 10719 Berlin",
+  "email": "doba@outlook.com",
+  "countryname": "Germany"
+}
