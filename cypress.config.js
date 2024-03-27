@@ -24,6 +24,7 @@ env:{
   baseUrl: 'https://beta.workmotion.com/login',
   username: 'aliaa+qahrmanager@workmotion.com',
   password: 'Test1234',
+  "countryName": "Germany"
 
 },
 retries: {

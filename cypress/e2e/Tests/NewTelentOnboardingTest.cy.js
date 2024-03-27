@@ -15,9 +15,7 @@ describe('Employee Onboarding Tests', () => {
     countryPage = new CountryPage();
     onboardingPage = new OnboardingPage();
     homePage.selectCreateNewItem();
-    // testData is loaded in the 'before' hook, so it will be available here
-    // Assume we're selecting a default country for each test to simplify
-    countryPage.selectCountryFromDropdownMenu("Germany");
+    countryPage.selectCountryFromDropdownMenu(Cypress.env('countryName'));
     countryPage.getStarted();
     onboardingPage.selectWorkGlobalOption();
   });
