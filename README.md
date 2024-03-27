@@ -59,7 +59,7 @@ and generates reports using the mochawesome reporter.
 Custom commands enhance testing capabilities. For instance:
 
 - `cy.setDate(day, monthNumber, year)` - Sets a date on a date picker component.
-- `cy.generateUniqueEmail(baseEmail)` - Generates a unique email for testing purposes.
+
 
 ## Environment and Authentication
 

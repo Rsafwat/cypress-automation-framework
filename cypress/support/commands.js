@@ -30,22 +30,7 @@ Cypress.Commands.add('setDate', (day, monthNumber, year) => {
     cy.contains(".css-ub1r1", day).click();
 })
 
-/**
- * Generates a unique email address by appending the current timestamp to the base email.
- * This ensures that each email address used in tests is unique
- * and allowing for individual test case validation
- *
- * @param {string} baseEmail The base email address to which the timestamp will be appended.
- *                            The timestamp is inserted before the "@" symbol to maintain
- *                            a valid email format.
- * @returns {string} A uniquely modified email address based on the input baseEmail.
- */
-Cypress.Commands.add('generateUniqueEmail', ( baseEmail) => { 
-    const timestamp = Date.now();
-  const uniqueEmail = baseEmail.replace('@', `_${timestamp}@`);
-  return uniqueEmail;
-})
-    
+
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
 //
