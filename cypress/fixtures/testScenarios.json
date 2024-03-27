@@ -1,4 +1,6 @@
 [
   { "workMode": "wfh", "positionType": "fullTime" },
-  { "workMode": "wfo", "positionType": "fullTime" }
+  { "workMode": "wfo", "positionType": "fullTime" },
+  { "workMode": "wfh", "positionType": "partTime" }
+
 ]

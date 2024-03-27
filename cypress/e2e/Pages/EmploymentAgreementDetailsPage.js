@@ -91,37 +91,13 @@ class EmploymentAgreementDetailsPage {
 
     }
 
-    /**
-     * Fills the form on the Employment Agreement Details page with data from a fixture.
-     * Uses the employment type to decide which radio button to check.
-     * @param {string} employmentType - The type of employment ('fullTime' or 'partTime').
-     */
-    fillEmploymentAgreementFormm(employmentType) {
-        cy.readFile('./cypress/fixtures/employmentAgreementDetails.json').then((data) => {
-            this.jobTitleInput.clear().type(data.jobTitle);
-            this.jobDescripionTextArea.clear();
-            data.jobDescription.forEach(task => {
-                this.jobDescripionTextArea.type(`${task}, `);
-            });
-            this.jobDescripionInGermanyTextArea.clear();
-            data.jobDescriptionInGermany.forEach(task => {
-                this.jobDescripionInGermanyTextArea.type(`${task}, `);
-            });
-            if (employmentType === 'fullTime') {
-                this.employmentFullTimeTypeRadioButton.check();
-            } else if (employmentType === 'partTime') {
-                this.employmentPartTimeTypeRadioButton.check();
-            }
-            this.contractFixedTermTypeRadioButton.check();
-            this.contactStartDateInput.click();
-            cy.setDate(data.contractStartDate.day, data.contractStartDate.month, data.contractStartDate.year);
-            this.contactEndDateInput.click();
-            cy.setDate(data.contractEndDate.day, data.contractEndDate.month, data.contractEndDate.year);
-            this.signatoryNameInput.clear().type(data.signatory.name);
-            this.signatoryTitleInput.clear().type(data.signatory.title);
-            this.EmploymentAgreementContinueButton.click();
-        });
-    }
+ /**
+ * Fills the employment agreement form with generated data based on the specified employment type.
+ * It populates fields for job title, job descriptions (generic and specific for Germany),
+ * employment type (full-time or part-time), contract type (fixed-term), contract start and end dates,
+ * and signatory details. Ends by clicking the continue button to proceed.
+ * 
+ * @param {string} employmentType - The type of employment, expected to be 'fullTime' or 'partTime'.*/
 
     fillEmploymentAgreementForm(employmentType) {
         const jobDescription = new Array(5).fill(null).map(() => faker.lorem.sentence());
