@@ -1,3 +1,5 @@
+import { faker } from '@faker-js/faker';
+
 /**
  * Represents a page object class for handling operations on the Employment Compensation Calculation form page.
  * This class includes methods to interact with various form elements like radio buttons, input fields,
@@ -62,19 +64,23 @@ class EmploymentCompensationCalculationPage {
     }
 
     /**
-     * Fills out the Employment Compensation Calculation form using the test data loaded from the fixture.
-     * Checks radio buttons, types into input fields, and clicks the continue button to proceed.
-     */
+   * Fills in the Employment Compensation Calculation form with preset options and a randomly generated base salary. 
+   * Non-salary fields are set to "No" by checking corresponding radio buttons. The base salary is generated using 
+   * faker within a range of 1000 to 50000 and entered into the form. After filling the form, it clicks the 
+   * continue button to proceed.
+   *
+   * Preconditions:
+   * - The `faker` library must be available.
+   * */
     fillEmploymentCompensationCalculationForm() {
-        cy.readFile('./cypress/fixtures/EmploymentCompensationCalculation.json').then((data) => {
-            this.privateHealthInsuranceNoRadioButton.check();
-            this.employeeStockOptionsPlanNoRadioButton.check();
-            this.baseSalaryInput.clear().type(data.basesalary);
-            this.fixedBounsNoRadioButton.check();
-            this.variableBounsNoRadioButton.check();
-            this.recieveAllowancesNoRadioButton.check();
-            this.employmentCompensationCalContinueButton.click();
-        });
+        this.privateHealthInsuranceNoRadioButton.check();
+        this.employeeStockOptionsPlanNoRadioButton.check();
+        this.baseSalaryInput.clear().type(faker.finance.amount({ min: 1000, max: 50000 }));
+        this.fixedBounsNoRadioButton.check();
+        this.variableBounsNoRadioButton.check();
+        this.recieveAllowancesNoRadioButton.check();
+        this.employmentCompensationCalContinueButton.click();
+
     }
 }
 

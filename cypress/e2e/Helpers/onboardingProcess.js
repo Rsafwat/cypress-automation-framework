@@ -38,20 +38,19 @@ const completeOnboarding = (workSetting, positionType) => {
   const employmentAgreementSummaryPage = new EmploymentAgreementSummaryPage();
 
   // Read and use data from the TalentDetails.json fixture
-  cy.readFile('./cypress/fixtures/TalentDetails.json').then(function (data) {
-    // Fill forms and navigate through the onboarding process steps
-    talentDetailsPage.fillNewTalentDetailsForm(workSetting)
-    employmentAgreementDetailsPage.fillEmploymentAgreementForm(positionType);
-    employmentContractClausesPage.fillEmploymentContractClausesForm();
-    employmentCompensationCalculationPage.fillEmploymentCompensationCalculationForm();
-    talentEmailInvitationPage.fillNewTalentMailInvitation();
-    employmentAgreementSummaryPage.confirmcandidateValidInformation();
-    employmentAgreementSummaryPage.goToTalentList();
-    homePage.openOnboardingList();
-    homePage.talentNameEntry.contains(`${data.firstName} ${data.lastName}`).should('exist');
-    homePage.markTheitemHasBeenRecieved();
-    homePage.newEmplyeeReceivedItem.contains(`Your part of the data collection to onboard ${data.firstName} in Germany has been finished`).should('exist');
-  });
-};
+  talentDetailsPage.fillNewTalentDetailsForm(workSetting)
+  employmentAgreementDetailsPage.fillEmploymentAgreementForm(positionType);
+  employmentContractClausesPage.fillEmploymentContractClausesForm();
+  employmentCompensationCalculationPage.fillEmploymentCompensationCalculationForm();
+  talentEmailInvitationPage.fillNewTalentMailInvitation();
+  employmentAgreementSummaryPage.confirmcandidateValidInformation();
+  employmentAgreementSummaryPage.goToTalentList();
+  homePage.openOnboardingList();
+  homePage.talentNameEntry.should('include.text', `${Cypress.env('firstName')} ${Cypress.env('lastName')}`);
+
+  homePage.markTheItemHasBeenRecieved();
+  homePage.newEmplyeeReceivedItem.should('include.text', `Your part of the data collection to onboard ${Cypress.env('firstName')} in Germany has been finished`);
+
+}
 
 export { completeOnboarding };

@@ -100,7 +100,7 @@ class HomePage {
     /**
          * mark the items of new emplyee has been recieved.
          */
-    markTheitemHasBeenRecieved() {
+    markTheItemHasBeenRecieved() {
         this.actionItemsLink.click();
         this.notificationsButton.first().click();
         this.markAsReadButton.click();

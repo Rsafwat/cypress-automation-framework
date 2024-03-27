@@ -24,5 +24,9 @@
     "mochawesome-merge": "^4.3.0",
     "mochawesome-report-generator": "^6.2.0",
     "rimraf": "^5.0.5"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "faker": "^6.6.6"
   }
 }

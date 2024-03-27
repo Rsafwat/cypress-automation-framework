@@ -4,3 +4,4 @@ cypress/screenshots/
 cypress/report/
 cypress/results/
 cypress/downloads/
+cypress/test-report.json

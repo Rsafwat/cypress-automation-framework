@@ -6,7 +6,8 @@
 - **Robust Locator strategies** to target elements
 - **Implementing Page Object Model**
 - **Hooks** to perform the repeated steps for all the tests inside spec
-- **Loading test data** from external fixtures files i.e. JSON
+- **Generate random test data** with faker library
+- **Loading test scenrios Conditions** from external fixtures files i.e. JSON
 - **Code Documentation**
 - **Pass browser and mode** as environment variable
 - **Configure routes** (URL endpoints) in a constant config file
@@ -33,7 +34,7 @@ This project includes several npm scripts to facilitate different testing scenar
 - `npm run cypress-test` - Executes Cypress tests.
 - `npm run head-test` - Runs tests in headed mode.
 - `npm run chrome-test` - Executes tests specifically in the Chrome browser.
-- `npm run recordDashBoardTest` - Records test runs # Workmotion Assessment - Cypress Testing
+- `npm run recordDashBoardTest` - Records test runs # Workmotion Assessment - Cypress cloud dashbaord 
 
 
 ## Custom Commands

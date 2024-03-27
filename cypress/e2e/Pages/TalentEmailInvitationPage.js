@@ -1,3 +1,4 @@
+import { faker } from '@faker-js/faker';
 /**
  * Represents the page for sending email invitations to talents.
  * This class includes methods for interacting with the UI elements
@@ -25,12 +26,11 @@ class TalentEmailInvitationPage {
      * and clicks the continue button to proceed with the invitation process.
      */
     fillNewTalentMailInvitation() {
-        cy.readFile('./cypress/fixtures/TalentDetails.json').then((data) => {
-            cy.generateUniqueEmail(data.email).then(uniqueEmail => {
-            this.talentEmailInput.clear().type(uniqueEmail); 
-            this.talentEmailInvitationContinueButton.click();
-        });});
+
+        this.talentEmailInput.clear().type(faker.internet.email());
+        this.talentEmailInvitationContinueButton.click();
     }
+
 }
 
 export default TalentEmailInvitationPage;
